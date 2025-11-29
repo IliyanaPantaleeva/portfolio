@@ -1,4 +1,4 @@
-import { fromJSON } from "postcss";
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import project1 from "../assets/images/pro-1.jpg";
