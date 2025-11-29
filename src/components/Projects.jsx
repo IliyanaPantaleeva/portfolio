@@ -16,6 +16,13 @@ import { Pagination, Autoplay } from "swiper";
 const Projects = () => {
   const pro = [
     {
+      image: project0,
+      name: "Dream Travel",
+      github_link: 
+      "https://github.com/IliyanaPantaleeva/dream-travel",
+      live_link: "https://dream-travel-iliyanapantaleeva.vercel.app/",
+    },
+    {
       image: project1,
       name: "Fitness SPA",
       github_link:
