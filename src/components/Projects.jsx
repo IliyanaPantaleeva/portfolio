@@ -16,7 +16,7 @@ import { Pagination, Autoplay } from "swiper";
 const Projects = () => {
   const pro = [
     {
-      image: project0,
+      image: project1,
       name: "Dream Travel",
       github_link: 
       "https://github.com/IliyanaPantaleeva/dream-travel",

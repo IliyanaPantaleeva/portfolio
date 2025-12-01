@@ -34,7 +34,26 @@ const Scroll = () => {
           <h4 className='md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-indigo-500'>
             Front-End Developer
           </h4>
-          <button className='btn-primary mt-8'>Contact Me</button>
+          <a
+            href='#contacts'
+            className='btn-primary mt-8 w-fit'
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById('contacts');
+              if (el) {
+                // Try to detect a fixed header/nav to calculate offset
+                const nav = document.querySelector('nav, header, #navbar, .navbar');
+                const navHeight = nav && nav.offsetHeight ? nav.offsetHeight : 80;
+                const extraGap = 10; // small space between navbar and target
+                const top = el.getBoundingClientRect().top + window.pageYOffset - navHeight - extraGap;
+                window.scrollTo({ top, behavior: 'smooth' });
+              } else {
+                window.location.hash = '#contacts';
+              }
+            }}
+          >
+            Contact Me
+          </a>
           <div className='mt-8 text-3xl flex items-center md:justify-start justify-center gap-5'>
             {contact_media?.map((info, i) => (
               <div 
