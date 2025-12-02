@@ -39,31 +39,8 @@ const Scroll = () => {
             className='btn-primary mt-8 w-fit'
             onClick={(e) => {
               e.preventDefault();
-              setTimeout(() => {
-                const el = document.getElementById('contacts');
-                if (el) {
-                  // Try to detect a fixed header/nav to calculate offset
-                  const nav = document.querySelector('nav, header, #navbar, .navbar');
-                  const navHeight = nav && nav.offsetHeight ? nav.offsetHeight : 0;
-                  const extraGap = 20; // small space between navbar and target
-                  
-                  // Use scrollIntoView as primary method (more reliable across deployments)
-                  try {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Apply offset via window.scrollBy if navbar detected
-                    if (navHeight > 0) {
-                      setTimeout(() => {
-                        window.scrollBy({ top: -(navHeight + extraGap), behavior: 'smooth' });
-                      }, 100);
-                    }
-                  } catch (err) {
-                    // Fallback: simple hash navigation
-                    window.location.hash = '#contacts';
-                  }
-                } else {
-                  window.location.hash = '#contacts';
-                }
-              }, 50);
+              // Simple and reliable: use hash navigation with native smooth scroll
+              window.location.hash = '#contacts';
             }}
           >
             Contact Me
