@@ -45,7 +45,8 @@ const Projects = () => {
       image: project5,
       name: "Lia Portfolio",
       github_link: "https://github.com/IliyanaPantaleeva/portfolio",
-      live_link: "https://portfolio-iliyanapantaleeva.vercel.app/",
+      live_link:"https://portfolio-sw8f-git-main-iliyanapantaleevas-projects.vercel.app/",
+      //old live_link: "https://portfolio-iliyanapantaleeva.vercel.app/",
     },
     {
       image: project6,
