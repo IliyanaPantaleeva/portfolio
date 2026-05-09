@@ -17,13 +17,6 @@ const Projects = () => {
   const pro = [
     {
       image: project1,
-      name: "Dream Travel",
-      github_link: 
-      "https://github.com/IliyanaPantaleeva/dream-travel",
-      live_link: "https://dream-travel-iliyanapantaleeva.vercel.app/",
-    },
-    {
-      image: project1,
       name: "Fitness SPA",
       github_link:
         "https://gitlab.com/a37-js-team-8-react-project/a37-js-team-8-react-project-fitness-tracking-app",
@@ -68,7 +61,7 @@ const Projects = () => {
     },
   ];
   return (
-    <section id="projects" className="py-10" text-white>
+    <section id="projects" className="py-10 text-white">
       <div className="text-center">
         <h3 className="text-4xl font-semibold">
           My <span className="text-indigo-500">Projects</span>
@@ -96,7 +89,7 @@ const Projects = () => {
             modules={[Pagination, Autoplay]}
           >
             {pro.map((pro_info, i) => (
-              <SwiperSlide key={i}>
+              <SwiperSlide key={pro_info.name}>
                 <div className="h-fit w-full p-4 bg-purple-300 rounded-xl">
                   <img src={pro_info.image} alt="" className="rounded-xl" />
                   <h3 className="text-xl my-4">{pro_info.name}</h3>
@@ -121,8 +114,8 @@ const Projects = () => {
             ))}
           </Swiper>
         </div>
-        <div className="lg:block-hidden rounded-full">
-          <img className="lg:block-hidden rounded-3xl" src={view} alt="" />
+        <div className="hidden lg:block rounded-full">
+          <img className="hidden lg:block rounded-3xl" src={view} alt="" />
         </div>
       </div>
     </section>
