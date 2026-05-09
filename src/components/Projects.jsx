@@ -46,7 +46,7 @@ const Projects = () => {
       image: project4,
       name: "Exchange rate",
       github_link: "https://github.com/lia-new/Exchange-rate",
-      live_link: "https://lia-new.github.io/Exchange-rate/",
+      live_link: "https://iliyanapantaleeva.github.io/Exchange-rate/",
     },
     {
       image: project5,
